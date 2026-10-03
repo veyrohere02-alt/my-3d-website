@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>3D Website</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  color:white;
+  background:#050505;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%,#292929 0,transparent 30%),
+    radial-gradient(circle at 80% 80%,#151515 0,transparent 35%);
+  pointer-events:none;
+}
+
+nav{
+  position:relative;
+  z-index:10;
+  width:100%;
+  padding:25px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.nav-btn{
+  padding:11px 20px;
+  border:1px solid #555;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.hero{
+  position:relative;
+  min-height:calc(100vh - 80px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:50px 7%;
+  text-align:center;
+}
+
+.content{
+  position:relative;
+  z-index:5;
+  max-width:800px;
+}
+
+.tag{
+  display:inline-block;
+  padding:8px 16px;
+  border:1px solid #444;
+  border-radius:50px;
+  color:#aaa;
+  margin-bottom:25px;
+  font-size:13px;
+  letter-spacing:2px;
+}
+
+h1{
+  font-size:clamp(50px,10vw,110px);
+  line-height:.9;
+  letter-spacing:-5px;
+  margin-bottom:25px;
+  background:linear-gradient(90deg,#fff,#777,#fff);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:shine 4s linear infinite;
+  background-size:200%;
+}
+
+@keyframes shine{
+  from{background-position:0%}
+  to{background-position:200%}
+}
+
+.subtitle{
+  color:#aaa;
+  font-size:18px;
+  line-height:1.6;
+  max-width:600px;
+  margin:auto;
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:15px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.primary{
+  background:white;
+  color:black;
+}
+
+.secondary{
+  border:1px solid #555;
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-5px) scale(1.03);
+}
+
+.scene{
+  position:absolute;
+  width:330px;
+  height:330px;
+  perspective:1000px;
+  opacity:.9;
+}
+
+.cube{
+  position:absolute;
+  width:220px;
+  height:220px;
+  left:55px;
+  top:55px;
+  transform-style:preserve-3d;
+  animation:rotate 12s infinite linear;
+}
+
+@keyframes rotate{
+  from{
+    transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to{
+    transform:rotateX(360deg) rotateY(360deg) rotateZ(180deg);
+  }
+}
+
+.face{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border:1px solid #777;
+  background:rgba(255,255,255,.025);
+  box-shadow:0 0 35px rgba(255,255,255,.08) inset;
+  backdrop-filter:blur(3px);
+}
+
+.front{transform:translateZ(110px)}
+.back{transform:rotateY(180deg) translateZ(110px)}
+.right{transform:rotateY(90deg) translateZ(110px)}
+.left{transform:rotateY(-90deg) translateZ(110px)}
+.top{transform:rotateX(90deg) translateZ(110px)}
+.bottom{transform:rotateX(-90deg) translateZ(110px)}
+
+.orb{
+  position:absolute;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:white;
+  box-shadow:0 0 30px white;
+  animation:float 5s ease-in-out infinite;
+}
+
+.orb.one{
+  top:18%;
+  left:15%;
+}
+
+.orb.two{
+  right:15%;
+  bottom:20%;
+  width:12px;
+  height:12px;
+  animation-delay:1s;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-35px)}
+}
+
+footer{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  text-align:center;
+  color:#555;
+  font-size:12px;
+}
+
+@media(max-width:600px){
+  nav{
+    padding:20px;
+  }
+
+  .hero{
+    padding:30px 20px;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .scene{
+    width:280px;
+    height:280px;
+    opacity:.35;
+  }
+
+  .cube{
+    width:180px;
+    height:180px;
+    left:50px;
+    top:50px;
+  }
+
+  .face{
+    width:180px;
+    height:180px;
+  }
+
+  .front{transform:translateZ(90px)}
+  .back{transform:rotateY(180deg) translateZ(90px)}
+  .right{transform:rotateY(90deg) translateZ(90px)}
+  .left{transform:rotateY(-90deg) translateZ(90px)}
+  .top{transform:rotateX(90deg) translateZ(90px)}
+  .bottom{transform:rotateX(-90deg) translateZ(90px)}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">VEYRO</div>
+  <a class="nav-btn" href="#explore">Explore</a>
+</nav>
+
+<main class="hero" id="explore">
+
+  <div class="scene">
+    <div class="cube">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face right"></div>
+      <div class="face left"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+
+  <div class="content">
+
+    <div class="tag">ENTER THE FUTURE</div>
+
+    <h1>CREATE<br>WITHOUT<br>LIMITS.</h1>
+
+    <p class="subtitle">
+      A futuristic 3D experience built completely with HTML and CSS.
+      No paid software. No hosting cost required for the demo.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#start">GET STARTED</a>
+      <a class="btn secondary" href="#explore">EXPLORE</a>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  © 2026 VEYRO — Built in 3D
+</footer>
+
+</body>
+</html>
