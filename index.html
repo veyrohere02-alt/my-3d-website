@@ -1,124 +1,407 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>O One Cakes & More | Gorai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211b16">
+<title>Sahil Furniture Works | Gorai, Mumbai</title>
+<meta name="description" content="Explore the Sahil Furniture Works website demo in Gorai, Mumbai. Contact the shop for furniture enquiries and custom work.">
+
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#351c1c}
-nav{padding:18px 7%;display:flex;justify-content:space-between;position:sticky;top:0;background:#fffaf8ee;backdrop-filter:blur(10px);z-index:5}
-nav b{font-size:20px;color:#8b3d4a}
-nav a{margin-left:18px;text-decoration:none;color:#351c1c;cursor:pointer}
-section{padding:70px 8%;scroll-margin-top:70px}
-.hero{text-align:center;min-height:85vh;display:flex;flex-direction:column;justify-content:center}
-.hero h1{font-size:clamp(42px,9vw,85px);margin:10px 0}
-.hero p{font-size:18px;color:#806767}
-.btn{display:inline-block;padding:14px 24px;margin:8px;border-radius:30px;background:#8b3d4a;color:white;text-decoration:none}
-.cake-scene{height:350px;display:grid;place-items:center;perspective:800px}
-.cake{width:210px;height:130px;position:relative;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-8deg);animation:float 3s ease-in-out infinite}
-.layer{position:absolute;width:210px;height:70px;border-radius:50%;background:linear-gradient(#8b4b43,#542b28);border:4px solid #f7d5c9;transform:translateZ(35px)}
-.layer:after{content:'';position:absolute;width:210px;height:70px;border-radius:50%;background:#74372f;top:35px;left:-4px;transform:translateZ(-35px)}
-.cream{position:absolute;width:210px;height:35px;background:#fff0e8;border-radius:50%;top:-5px;z-index:2}
-.cherry{position:absolute;width:24px;height:24px;background:#c52f42;border-radius:50%;top:-35px;left:93px;box-shadow:0 0 15px #ff7180;z-index:3}
-.candle{position:absolute;width:12px;height:55px;background:#fff;top:-75px;left:99px;z-index:3}
-.flame{position:absolute;width:16px;height:25px;background:#ff9d22;border-radius:50% 50% 50% 0;transform:rotate(45deg);top:-102px;left:97px;box-shadow:0 0 20px #ff8c00}
-@keyframes float{50%{transform:rotateX(58deg) rotateZ(-8deg) translateY(-15px)}}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.card{background:white;padding:25px;border-radius:22px;box-shadow:0 10px 30px #0001}
-.contact{text-align:center;background:#351c1c;color:white}
-.contact a{color:white}
-.center{text-align:center}
-footer{text-align:center;padding:25px;background:#241313;color:white}
-@media(max-width:600px){
-nav a{display:inline-block;margin-left:8px;font-size:13px}
-section{padding:55px 6%}
-.cake-scene{height:300px}
+:root {
+  --dark: #211b16;
+  --cream: #f7f2e9;
+  --wood: #a87548;
+  --white: #fffdf9;
+  --muted: #756b61;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+}
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container { width: min(1120px, 90%); margin: auto; }
+header {
+  background: var(--dark);
+  color: white;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.logo { font-size: 19px; font-weight: 800; }
+.logo span { color: #d5aa7c; }
+nav { display: flex; gap: 22px; align-items: center; }
+nav a { font-size: 13px; color: #f5eee5; }
+.hero {
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 36px;
+  padding: 55px 0;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--wood);
+  font-size: 12px;
+  font-weight: bold;
+}
+h1 {
+  font-size: clamp(38px, 5.5vw, 65px);
+  line-height: 1.06;
+  margin: 18px 0;
+  letter-spacing: -2px;
+}
+.hero p, .section-intro {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+}
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.btn {
+  display: inline-block;
+  padding: 14px 19px;
+  border-radius: 4px;
+  background: var(--dark);
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid #b8a999;
+}
+.hero-image {
+  height: 410px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.strip {
+  background: #e9dfd0;
+  padding: 23px 0;
+}
+.strip-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+section { padding: 75px 0; }
+.section-head { margin-bottom: 30px; }
+h2 { font-size: clamp(29px, 4vw, 42px); margin: 10px 0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.category {
+  background: var(--white);
+  padding-bottom: 22px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.category img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: #e3d8c9;
+}
+.category h3, .category p { margin-left: 18px; margin-right: 18px; }
+.category h3 { margin-top: 18px; margin-bottom: 8px; }
+.category p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.about {
+  background: var(--dark);
+  color: white;
+}
+.about .section-intro { color: #d3c8bc; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+.about img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.points { line-height: 2.2; padding-left: 20px; color: #f2e8dc; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.contact-card {
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid #e8ded1;
+  border-radius: 5px;
+}
+.contact-card p { color: var(--muted); line-height: 1.8; font-size: 14px; }
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+footer a { text-decoration: underline; }
+.float-wa {
+  position: fixed;
+  right: 17px;
+  bottom: 18px;
+  z-index: 20;
+  background: #168c53;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 40px;
+  box-shadow: 0 4px 18px #0003;
+  font-size: 13px;
+  font-weight: bold;
+}
+@media(max-width: 720px) {
+  nav { gap: 12px; }
+  nav a { font-size: 11px; }
+  .logo { font-size: 16px; }
+  .hero, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 42px; gap: 25px; }
+  .hero-image { height: 310px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .category img { height: 165px; }
+  .category h3 { font-size: 15px; }
+  .category p { font-size: 12px; }
+  section { padding: 52px 0; }
+  .strip-inner { font-size: 11px; }
+}
+@media(max-width: 380px) {
+  nav { gap: 8px; }
+  .grid { grid-template-columns: 1fr; }
+  .category img { height: 220px; }
 }
 </style>
 </head>
 
 <body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">SAHIL <span>FURNITURE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<nav>
-<b>O ONE CAKES</b>
-<div>
-<a onclick="go('cakes')">Cakes</a>
-<a onclick="go('menu')">Menu</a>
-<a onclick="go('contact')">Contact</a>
-</div>
-</nav>
-
-<section class="hero">
-<p>GORAI • BORIVALI WEST</p>
-<h1>Made for your<br>sweetest moments.</h1>
-<p>Fresh cakes, custom creations & delicious treats.</p>
-
-<div>
-<a class="btn" onclick="go('cakes')">Explore Cakes</a>
-<a class="btn" href="https://wa.me/919167867466">Order on WhatsApp</a>
-</div>
-
-<div class="cake-scene">
-<div class="cake">
-<div class="layer"></div>
-<div class="cream"></div>
-<div class="cherry"></div>
-<div class="candle"></div>
-<div class="flame"></div>
-</div>
-</div>
+<main>
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow">Furniture for your home</div>
+    <h1>Comfort meets timeless design.</h1>
+    <p>
+      Discover furniture inspiration for living rooms, bedrooms
+      and dining spaces. Contact Sahil Furniture Works in Gorai
+      to discuss your furniture requirements and custom work.
+    </p>
+    <div class="actions">
+      <a class="btn" href="#collection">Explore Collection ↗</a>
+      <a class="btn btn-outline" href="#contact">Contact the Shop</a>
+    </div>
+  </div>
+  <img class="hero-image"
+    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85"
+    alt="Modern living room with a comfortable sofa">
 </section>
 
-<section id="cakes">
-<h2 class="center">Our Cakes 🎂</h2>
-<div class="cards">
-<div class="card"><h3>🍫 Chocolate Cakes</h3><p>Rich, creamy & delicious.</p></div>
-<div class="card"><h3>🍰 Cream Cakes</h3><p>Light, fresh & beautiful.</p></div>
-<div class="card"><h3>✨ Custom Cakes</h3><p>Made specially for you.</p></div>
+<div class="strip">
+  <div class="container strip-inner">
+    <span>Thoughtful Furniture</span>
+    <span>Home & Living Inspiration</span>
+    <span>Gorai, Mumbai</span>
+  </div>
 </div>
+
+<section id="collection">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Explore our styles</div>
+      <h2>Furniture Collection</h2>
+      <p class="section-intro">
+        Explore these furniture categories and enquire about
+        available designs, sizes, materials and prices.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"
+          alt="Contemporary sofa inspiration">
+        <h3>Sofa Sets</h3>
+        <p>Explore seating styles for your living space. Ask about available designs.</p>
+      </article>
+
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"
+          alt="Comfortable bedroom inspiration">
+        <h3>Beds & Bedroom</h3>
+        <p>Find inspiration for a comfortable and inviting bedroom.</p>
+      </article>
+
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80"
+          alt="Elegant interior and furniture">
+        <h3>Home Interiors</h3>
+        <p>Furniture and decor ideas to complement your home.</p>
+      </article>
+
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"
+          alt="Storage and wardrobe inspiration">
+        <h3>Wardrobes & Storage</h3>
+        <p>Explore practical storage ideas for different spaces.</p>
+      </article>
+
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80"
+          alt="Dining room furniture inspiration">
+        <h3>Dining Furniture</h3>
+        <p>Dining space inspiration for everyday meals and gatherings.</p>
+      </article>
+
+      <article class="category">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=80"
+          alt="Stylish home furniture details">
+        <h3>Custom Furniture</h3>
+        <p>Ask the shop whether your preferred design and dimensions can be made.</p>
+      </article>
+    </div>
+
+    <div class="actions">
+      <a class="btn"
+        href="https://wa.me/919833578138?text=Hello%20Sahil%20Furniture%20Works%2C%20I%20would%20like%20to%20enquire%20about%20your%20furniture.">
+        Enquire on WhatsApp ↗
+      </a>
+    </div>
+  </div>
 </section>
 
-<section id="menu">
-<h2 class="center">Our Menu</h2>
-<div class="cards">
-<div class="card">Chocolate Chips Cake</div>
-<div class="card">Chocolate Mousse Cake</div>
-<div class="card">Oreo Chocolate Cake</div>
-<div class="card">Dutch Truffle Cake</div>
-<div class="card">Rasmalai Cream Cake</div>
-<div class="card">Blueberry Cream Cake</div>
-<div class="card">Chocolate Brownie</div>
-<div class="card">Chocolate Lava Brownie</div>
-</div>
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="eyebrow">Your local furniture shop</div>
+      <h2>Make your space feel like home.</h2>
+      <p class="section-intro">
+        Looking for furniture for your home? Connect with Sahil
+        Furniture Works in Gorai, Mumbai, to discuss your needs.
+      </p>
+      <ul class="points">
+        <li>Discuss your furniture requirements</li>
+        <li>Ask about available styles and materials</li>
+        <li>Enquire about custom sizes and designs</li>
+        <li>Contact the shop directly for current prices</li>
+      </ul>
+      <a class="btn"
+        href="https://wa.me/919833578138?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20furniture.">
+        Start an Enquiry
+      </a>
+    </div>
+    <img loading="lazy"
+      src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+      alt="Warm modern home interior">
+  </div>
 </section>
 
-<section class="contact" id="contact">
-<h2>Let's Make Your Celebration Sweeter 🎂</h2>
-<p>Shop 1, Chamunda Krupa Bungalow, RSC Road 28,<br>near Sangam Bungalow, Gorai, Mumbai</p>
-<a class="btn" href="tel:+919167867466">Call Now</a>
-<a class="btn" href="https://wa.me/919167867466">WhatsApp</a>
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Visit or contact us</div>
+      <h2>Let's talk furniture.</h2>
+      <p class="section-intro">
+        Get in touch to ask about products, availability and pricing.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Shop Information</h3>
+        <p><strong>Sahil Furniture Works</strong></p>
+        <p>
+          Shop No. 05, Pragati Apartment, 02, Gorai Road,
+          near Pragati School, Gorai 2, Borivali,
+          Mumbai, Maharashtra 400091.
+        </p>
+        <p><strong>Phone:</strong> 098335 78138</p>
+        <p><strong>Listed hours:</strong> Closes at 9 PM.
+        Please confirm the current schedule before visiting.</p>
+        <div class="actions">
+          <a class="btn" href="tel:+919833578138">Call Shop</a>
+          <a class="btn btn-outline"
+             href="https://maps.google.com/?cid=2637890368823405392&entry=gps"
+             target="_blank" rel="noopener">Get Directions ↗</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Send a WhatsApp Enquiry</h3>
+        <p>
+          Tell the shop what type of furniture you are looking
+          for. Ask for current prices, sizes, materials and
+          availability directly.
+        </p>
+        <a class="btn"
+          href="https://wa.me/919833578138?text=Hello%20Sahil%20Furniture%20Works%2C%20I%20am%20interested%20in%20your%20furniture.%20Please%20share%20available%20designs%20and%20prices."
+          target="_blank" rel="noopener">
+          Chat on WhatsApp ↗
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+</main>
 
-<footer>© O One Cakes & More • Gorai</footer>
+<footer>
+  <strong>SAHIL FURNITURE WORKS</strong><br>
+  Gorai 2, Borivali, Mumbai 400091<br>
+  <a href="#home">Back to top ↑</a><br><br>
+  <small>
+    Website concept / demo. Product availability, categories,
+    pricing and custom-work options must be confirmed by the shop.
+  </small>
+</footer>
 
-<script>
-function go(id){
-document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-
-let s=document.querySelector('.cake-scene'),c=document.querySelector('.cake');
-
-s.onpointermove=e=>{
-let r=s.getBoundingClientRect(),x=e.clientX/r.width-.5,y=e.clientY/r.height-.5;
-c.style.transform=`rotateX(${58-y*25}deg) rotateY(${x*30}deg) rotateZ(-8deg)`;
-};
-
-s.onpointerleave=()=>{
-c.style.transform='rotateX(58deg) rotateY(0) rotateZ(-8deg)';
-};
-</script>
-
+<a class="float-wa"
+   href="https://wa.me/919833578138?text=Hello%20Sahil%20Furniture%20Works%2C%20I%20have%20a%20furniture%20enquiry."
+   target="_blank" rel="noopener"
+   aria-label="Contact Sahil Furniture Works on WhatsApp">
+  WhatsApp ↗
+</a>
 </body>
 </html>
