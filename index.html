@@ -4,296 +4,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#211b16">
-<meta name="description" content="Explore sofa sets, beds, wardrobes and dining furniture at Infinity Furniture Gallery, Goregaon West, Mumbai. Contact the store for product enquiries.">
-<title>Infinity Furniture Gallery | Premium Furniture</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
+<title>Oakora Living | Furniture Studio</title>
 <style>
-:root {
-  --dark:#211b16;
-  --brown:#554032;
-  --cream:#f7f2e9;
-  --gold:#c8a66a;
-  --white:#fffdf9;
-  --muted:#786d62;
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+body{font-family:Arial,sans-serif;background:#fffdf9;color:#292820}
 a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-.wrap{width:min(1120px,92%);margin:auto}
-header{background:var(--dark);color:white;position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff1b}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{font-family:'Playfair Display',serif;font-size:21px;line-height:1.15}
-.logo span{display:block;color:var(--gold);font:10px 'DM Sans',sans-serif;letter-spacing:3px;margin-top:5px}
-.navlinks{display:flex;gap:23px;align-items:center;font-size:13px}
-.navlinks a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:4px;padding:13px 19px;font-weight:700;font-size:13px;transition:.2s}
-.btn-gold{background:var(--gold);color:#211b16}
-.btn-light{background:var(--white);color:var(--dark)}
-.btn-outline{border:1px solid #ffffff65;color:white}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
-.hero{background:var(--dark);color:white;padding:54px 0 70px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:42px}
-.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15}
-h1{font-size:clamp(39px,5.3vw,65px);margin:20px 0}
-.hero p{color:#ded5ca;max-width:470px;font-size:15px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
-.hero-note{margin-top:25px;color:#c9bbaa;font-size:12px}
-.hero-image{height:460px;position:relative}
-.hero-image img{width:100%;height:100%;object-fit:cover;border-radius:3px}
-.image-label{position:absolute;bottom:18px;left:-20px;background:var(--gold);color:var(--dark);padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:1px}
-.section{padding:76px 0}
-.section-head{text-align:center;max-width:640px;margin:0 auto 35px}
-.section-head h2{font-size:clamp(30px,4vw,43px);margin:12px 0}
-.section-head p{color:var(--muted);font-size:14px}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.category{background:var(--white);border:1px solid #e8dfd2;overflow:hidden}
-.category img{width:100%;height:245px;object-fit:cover;display:block;transition:transform .4s}
-.category:hover img{transform:scale(1.04)}
-.category-body{padding:20px}
-.category h3{font-size:23px;margin-bottom:7px}
-.category p{font-size:13px;color:var(--muted);margin-bottom:16px}
-.text-link{font-size:12px;font-weight:700;color:#755536}
-.feature{background:#e9dfd0}
-.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.feature-image img{width:100%;height:410px;object-fit:cover}
-.feature h2{font-size:clamp(32px,4vw,46px);margin:14px 0 20px}
-.feature p{color:#685b4e;font-size:14px}
-.feature-list{list-style:none;margin:22px 0}
-.feature-list li{padding:10px 0;border-bottom:1px solid #d6c8b5;font-size:13px}
-.feature-list li:before{content:"✦";color:#9a713c;margin-right:10px}
-.custom{background:var(--brown);color:white;text-align:center;padding:60px 0}
-.custom h2{font-size:clamp(30px,4vw,43px);margin:12px 0}
-.custom p{max-width:600px;margin:0 auto;color:#e6d9cb;font-size:14px}
-.custom .btn{margin-top:24px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.contact-card{background:var(--white);padding:28px;border:1px solid #e8dfd2}
-.contact-card h3{font-size:25px;margin-bottom:18px}
-.contact-card p{font-size:14px;color:var(--muted);margin:12px 0}
-.contact-card strong{color:var(--dark)}
-.rating{color:#bd914b;font-weight:700}
-.map-box{margin-top:18px;background:#eee4d7;padding:20px}
-.map-box p{margin:0 0 12px}
-footer{background:var(--dark);color:#d8cbbd;padding:30px 0;text-align:center;font-size:12px}
-footer strong{font-family:'Playfair Display',serif;color:white;font-size:19px}
-footer p{margin-top:8px}
-.disclaimer{font-size:10px;color:#a99a89;margin-top:14px}
-.float-wa{position:fixed;right:17px;bottom:18px;background:#218c55;color:white;padding:14px 18px;border-radius:30px;font-weight:700;font-size:13px;box-shadow:0 5px 20px #0003;z-index:30}
-@media(max-width:760px){
- .nav{min-height:68px}
- .logo{font-size:18px}
- .navlinks{gap:12px;font-size:11px}
- .navlinks .hide-mobile{display:none}
- .navlinks .btn{padding:10px;font-size:11px}
- .hero{padding:38px 0 45px}
- .hero-grid,.feature-grid,.contact-grid{grid-template-columns:1fr}
- .hero-grid{gap:28px}
- .hero-image{height:310px;margin-left:10px}
- .image-label{left:-10px}
- .categories{grid-template-columns:1fr 1fr;gap:12px}
- .category img{height:165px}
- .category-body{padding:13px}
- .category h3{font-size:19px}
- .category p{font-size:12px}
- .section{padding:54px 0}
- .feature-image img{height:290px}
- .feature-grid{gap:25px}
- .contact-card{padding:22px}
-}
-@media(max-width:390px){
- .categories{grid-template-columns:1fr}
- .category img{height:230px}
- .logo{font-size:16px}
+.top{text-align:center;background:#292820;color:white;padding:10px;font-size:11px;letter-spacing:2px}
+nav{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e8dfd1}
+.logo{font:25px Georgia,serif;letter-spacing:2px}
+.logo small{display:block;text-align:center;font:9px Arial;letter-spacing:3px;margin-top:5px}
+nav a:last-child,.btn{background:#292820;color:white;padding:13px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.hero{display:grid;grid-template-columns:1fr 1fr;background:#f4eee4;min-height:470px}
+.heroText{padding:70px 10%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.tag{font-size:10px;letter-spacing:3px;color:#9c774d;text-transform:uppercase;margin-bottom:20px}
+h1{font:clamp(43px,5vw,68px)/1.05 Georgia,serif;font-weight:normal;margin-bottom:22px}
+.hero p:not(.tag){color:#6f6b62;line-height:1.8;margin-bottom:28px}
+.hero img{width:100%;height:100%;min-height:400px;object-fit:cover}
+.trust{padding:22px 5%;display:flex;justify-content:center;gap:35px;flex-wrap:wrap;border-bottom:1px solid #e8dfd1;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+section{padding:75px 7%}
+.heading{font:normal clamp(32px,4vw,46px) Georgia,serif;margin-bottom:12px}
+.sub{color:#777166;font-size:13px;line-height:1.8;margin-bottom:30px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid #e8dfd1;background:white}
+.card img{width:100%;height:310px;object-fit:cover;display:block}
+.info{padding:20px}
+.info small{color:#a17b4f;letter-spacing:1.5px;text-transform:uppercase;font-size:9px}
+.info h3{font:25px Georgia,serif;font-weight:normal;margin:9px 0}
+.info p{font-size:12px;line-height:1.8;color:#777166;margin-bottom:16px}
+.info a{font-size:10px;letter-spacing:1px;border-bottom:1px solid #a17b4f;padding-bottom:4px}
+.about{background:#f4eee4;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.about img{width:100%;max-height:440px;object-fit:cover}
+.about p{color:#6f6b62;line-height:1.9;font-size:14px;margin:20px 0}
+.custom{margin:0 7% 70px;background:#292820;color:white;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.custom h2{font:36px Georgia,serif;font-weight:normal}
+.custom p{color:#d2ccc1;font-size:13px;line-height:1.8;margin-top:12px}
+.custom a{border:1px solid #d2b994;padding:13px;color:white;font-size:11px;white-space:nowrap}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact p{color:#777166;line-height:1.9;font-size:14px;margin:18px 0}
+form{background:#f4eee4;padding:25px}
+label{display:block;font-size:11px;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d8cdbd;background:white;font-size:14px}
+textarea{min-height:80px}
+button{margin-top:16px;width:100%;border:0;background:#292820;color:white;padding:15px;cursor:pointer}
+footer{background:#292820;color:white;padding:35px 7%}
+footer p{color:#d2ccc1;font-size:12px;margin-top:12px}
+footer small{display:block;margin-top:20px;color:#bdb6a9}
+.wa{position:fixed;right:15px;bottom:15px;background:#24734c;color:white;padding:14px 18px;border-radius:30px;font-size:12px}
+@media(max-width:700px){
+ nav{padding:18px 5%}.logo{font-size:20px}
+ .hero{grid-template-columns:1fr}.heroText{padding:50px 8%}
+ .hero img{min-height:300px;max-height:380px}
+ section{padding:55px 5%}.products{grid-template-columns:1fr}
+ .card img{height:330px}.about,.contact{grid-template-columns:1fr}
+ .custom{margin:0 5% 50px;padding:30px;display:block}
+ .custom h2{font-size:30px}.custom a{display:inline-block;margin-top:22px}
+ .trust{gap:15px}
 }
 </style>
 </head>
-
 <body>
-<header>
-  <div class="wrap nav">
-    <a href="#home" class="logo">
-      INFINITY FURNITURE
-      <span>GALLERY · GOREGAON</span>
-    </a>
-    <nav class="navlinks">
-      <a href="#collection">Collection</a>
-      <a href="#about" class="hide-mobile">About</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-gold" href="#collection">Explore</a>
-    </nav>
-  </div>
-</header>
+
+<div class="top">PREMIUM HANDCRAFTED FURNITURE · PAN-INDIA DELIVERY</div>
+
+<nav>
+  <a href="#home" class="logo">OAKORA LIVING
+    <small>FURNITURE STUDIO</small>
+  </a>
+  <a href="#contact">ENQUIRE ↗</a>
+</nav>
 
 <main>
 <section class="hero" id="home">
- <div class="wrap hero-grid">
-  <div>
-   <div class="eyebrow">Comfort meets craftsmanship</div>
-   <h1>Make Your Home Feel Like <span style="color:var(--gold)">Home.</span></h1>
-   <p>Discover furniture inspiration for your living room, bedroom and dining space. Explore styles and enquire about the pieces you love.</p>
-   <div class="actions">
-    <a href="#collection" class="btn btn-gold">Explore Collection ↗</a>
-    <a href="https://maps.app.goo.gl/SFBfkPKh6mArHL5m7" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
-   </div>
-   <div class="hero-note">★ 4.2/5 Google rating · 206 reviews</div>
+  <div class="heroText">
+    <div class="tag">Furniture for considered spaces</div>
+    <h1>Bring your space to life.</h1>
+    <p>Premium-quality, handcrafted designs for homes and luxury spaces. Discover furniture that brings warmth, character and comfort to your home.</p>
+    <a class="btn" href="#collections">Explore Collection ↗</a>
   </div>
-  <div class="hero-image">
-   <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1100&q=85" alt="Modern living room sofa inspiration">
-   <div class="image-label">THOUGHTFULLY FURNISHED LIVING</div>
-  </div>
- </div>
+  <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Premium living room interior">
 </section>
 
-<section class="section" id="collection">
- <div class="wrap">
-  <div class="section-head">
-   <div class="eyebrow">Find your style</div>
-   <h2>Explore Our Collection</h2>
-   <p>Furniture inspiration for every corner of your home. Contact the store to confirm available designs, sizes and prices.</p>
+<div class="trust">
+  <span>Custom-made furniture</span>
+  <span>Handcrafted designs</span>
+  <span>Mumbai based</span>
+  <span>Pan-India delivery</span>
+</div>
+
+<section id="collections">
+  <div class="tag">Selected pieces</div>
+  <h2 class="heading">Explore Our Collection</h2>
+  <p class="sub">Discover furniture styles inspired by the products featured on Oakora Living's Instagram page. Contact the team for availability and customisation.</p>
+
+  <div class="products">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=85" alt="Wooden storage cabinet">
+      <div class="info">
+        <small>Storage Collection</small>
+        <h3>Cane-Front Cabinet</h3>
+        <p>Warm wooden tones and cane-inspired detailing for a stylish home.</p>
+        <a href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27m%20interested%20in%20your%20cabinet%20collection.">ENQUIRE ABOUT THIS ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344?auto=format&fit=crop&w=800&q=85" alt="Contemporary wooden seating">
+      <div class="info">
+        <small>Seating Collection</small>
+        <h3>Cane-Back Bench</h3>
+        <p>Timeless wooden seating with a relaxed, contemporary character.</p>
+        <a href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27m%20interested%20in%20your%20bench%20collection.">ENQUIRE ABOUT THIS ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=85" alt="Wooden dining table and chairs">
+      <div class="info">
+        <small>Dining Collection</small>
+        <h3>Dining Furniture</h3>
+        <p>Thoughtful dining furniture for everyday meals and special gatherings.</p>
+        <a href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27m%20interested%20in%20your%20dining%20collection.">ENQUIRE ABOUT THIS ↗</a>
+      </div>
+    </article>
   </div>
-
-  <div class="categories">
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Contemporary sofa inspiration">
-    <div class="category-body">
-     <h3>Sofa Sets</h3>
-     <p>Comfortable styles for everyday living and entertaining.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20am%20interested%20in%20sofa%20sets.%20Please%20share%20available%20designs%20and%20prices." target="_blank" rel="noopener">ENQUIRE ON WHATSAPP ↗</a>
-    </div>
-   </article>
-
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Bedroom and bed inspiration">
-    <div class="category-body">
-     <h3>Beds & Bedrooms</h3>
-     <p>Create a relaxing space with bedroom furniture inspiration.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20am%20interested%20in%20beds%20and%20bedroom%20furniture.%20Please%20share%20available%20designs%20and%20prices." target="_blank" rel="noopener">ENQUIRE ON WHATSAPP ↗</a>
-    </div>
-   </article>
-
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Dining furniture and home interior inspiration">
-    <div class="category-body">
-     <h3>Dining & Interiors</h3>
-     <p>Dining spaces and furniture ideas for your home.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20am%20interested%20in%20dining%20tables%20and%20other%20furniture.%20Please%20share%20available%20designs%20and%20prices." target="_blank" rel="noopener">ENQUIRE ON WHATSAPP ↗</a>
-    </div>
-   </article>
-
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Wardrobe and storage inspiration">
-    <div class="category-body">
-     <h3>Wardrobes & Storage</h3>
-     <p>Storage inspiration to help organise your space.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20am%20interested%20in%20wardrobes%20and%20storage%20furniture.%20Please%20share%20available%20designs%20and%20prices." target="_blank" rel="noopener">ENQUIRE ON WHATSAPP ↗</a>
-    </div>
-   </article>
-
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=800&q=80" alt="Modern furniture and sofa inspiration">
-    <div class="category-body">
-     <h3>Sofa-Cum-Beds</h3>
-     <p>Versatile furniture ideas for flexible living spaces.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20am%20interested%20in%20sofa-cum-beds.%20Please%20share%20available%20designs%20and%20prices." target="_blank" rel="noopener">ENQUIRE ON WHATSAPP ↗</a>
-    </div>
-   </article>
-
-   <article class="category">
-    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Custom home furniture and interior inspiration">
-    <div class="category-body">
-     <h3>Custom Furniture</h3>
-     <p>Ask the store about custom sizes, layouts and finishes.</p>
-     <a class="text-link" href="https://wa.me/919372795285?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20custom%20furniture.%20Please%20contact%20me." target="_blank" rel="noopener">DISCUSS YOUR IDEA ↗</a>
-    </div>
-   </article>
-  </div>
- </div>
 </section>
 
-<section class="section feature" id="about">
- <div class="wrap feature-grid">
-  <div class="feature-image">
-   <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Warm modern home interior inspiration">
-  </div>
+<section class="about" id="about">
+  <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85" alt="Elegant modern furniture interior">
   <div>
-   <div class="eyebrow">Designed around you</div>
-   <h2>Furniture That Fits Your Lifestyle</h2>
-   <p>Looking for a new sofa, a bedroom upgrade or furniture made for your space? Connect with Infinity Furniture Gallery to discuss your requirements.</p>
-   <ul class="feature-list">
-    <li>Ask about available furniture designs</li>
-    <li>Discuss custom measurements and layouts</li>
-    <li>Enquire about materials, finishes and prices</li>
-    <li>Contact the store directly for product details</li>
-   </ul>
-   <a href="https://wa.me/919372795285?text=Hello%20Infinity%20Furniture%20Gallery%2C%20I%20would%20like%20to%20enquire%20about%20your%20furniture%20collection." target="_blank" rel="noopener" class="btn btn-gold">Talk About Your Requirements ↗</a>
+    <div class="tag">The Oakora Living feel</div>
+    <h2 class="heading">Details that make a space yours.</h2>
+    <p>Oakora Living showcases premium-quality, handcrafted designs for homes and luxury spaces. Whether you're furnishing a room or exploring a custom-made piece, start a conversation with the team.</p>
+    <a class="btn" href="#contact">Discuss Your Space ↗</a>
   </div>
- </div>
 </section>
 
 <section class="custom">
- <div class="wrap">
-  <div class="eyebrow">Your home, your style</div>
-  <h2>Have a Furniture Idea in Mind?</h2>
-  <p>Share what you are looking for and ask the store about suitable options, custom designs and pricing.</p>
-  <a href="https://wa.me/919372795285?text=Hello%2C%20I%20would%20like%20to%20discuss%20my%20furniture%20requirements." target="_blank" rel="noopener" class="btn btn-gold">Send a WhatsApp Enquiry ↗</a>
- </div>
+  <div>
+    <div class="tag">Designed around your needs</div>
+    <h2>Looking for custom furniture?</h2>
+    <p>Share your preferred style, dimensions and requirements with the team to explore suitable options.</p>
+  </div>
+  <a href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27d%20like%20to%20discuss%20custom-made%20furniture.">DISCUSS YOUR IDEA ↗</a>
 </section>
 
-<section class="section" id="contact">
- <div class="wrap">
-  <div class="section-head">
-   <div class="eyebrow">Visit or get in touch</div>
-   <h2>Let's Connect</h2>
-   <p>Contact the store directly for current stock, opening hours and pricing.</p>
+<section class="contact" id="contact">
+  <div>
+    <div class="tag">Let's talk furniture</div>
+    <h2 class="heading">Find the right piece for your space.</h2>
+    <p>For product details, custom furniture enquiries and delivery questions, contact Oakora Living directly.</p>
+    <p><strong>Location:</strong> Mumbai, India<br>
+    <strong>Delivery:</strong> Pan-India<br>
+    <strong>WhatsApp:</strong> +91 99203 93317</p>
+    <a class="btn" href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture.">Chat on WhatsApp ↗</a>
   </div>
 
-  <div class="contact-grid">
-   <div class="contact-card">
-    <h3>Store Information</h3>
-    <p><strong>Business</strong><br>Infinity Furniture Gallery – Best Furniture Shop</p>
-    <p><strong>Address</strong><br>New Link Road, Motilal Nagar II, Goregaon West, Mumbai, Maharashtra 400104</p>
-    <p><strong>Phone</strong><br><a href="tel:+919372795285">093727 95285</a></p>
-    <p><strong>Google Rating</strong><br><span class="rating">★ 4.2/5</span> · 206 reviews</p>
-    <p><strong>Listed closing time</strong><br>10:00 PM — please confirm before visiting.</p>
-    <div class="actions">
-     <a class="btn btn-gold" href="tel:+919372795285">Call Store</a>
-     <a class="btn" style="background:#e6ddcf" href="https://wa.me/919372795285?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20furniture." target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-   </div>
-
-   <div class="contact-card">
-    <h3>Find the Store</h3>
-    <p>Open the location in Google Maps to check directions and plan your visit.</p>
-    <div class="map-box">
-     <p><strong>Infinity Furniture Gallery</strong></p>
-     <p>Goregaon West, Mumbai 400104</p>
-     <a class="btn btn-gold" href="https://maps.app.goo.gl/SFBfkPKh6mArHL5m7" target="_blank" rel="noopener">Open Google Maps ↗</a>
-    </div>
-   </div>
-  </div>
- </div>
+  <form id="enquiry">
+    <div class="tag">Product enquiry</div>
+    <label for="name">Your name</label>
+    <input id="name" required placeholder="Enter your name">
+    <label for="interest">Interested in</label>
+    <select id="interest">
+      <option>Cane-front cabinet</option>
+      <option>Cane-back bench</option>
+      <option>Dining furniture</option>
+      <option>Bedroom furniture</option>
+      <option>Custom-made furniture</option>
+      <option>Other furniture</option>
+    </select>
+    <label for="details">Your requirements</label>
+    <textarea id="details" placeholder="Tell us what you are looking for"></textarea>
+    <button type="submit">Continue on WhatsApp ↗</button>
+    <p style="font-size:10px;color:#777">Your enquiry will open in WhatsApp for you to send.</p>
+  </form>
 </section>
 </main>
 
 <footer>
- <div class="wrap">
-  <strong>Infinity Furniture Gallery</strong>
-  <p>Furniture inspiration for your home.</p>
-  <p class="disclaimer">Independent demo concept created for presentation purposes. Not the official website. Images are illustrative and may not represent actual store inventory. Business details should be confirmed with the owner.</p>
-  <p>© <span id="year"></span> · Demo Website</p>
- </div>
+  <div class="logo">OAKORA LIVING<small>FURNITURE STUDIO</small></div>
+  <p>Premium-quality, handcrafted designs for homes and luxury spaces.</p>
+  <small>Unofficial website demo concept · For review and discussion</small>
 </footer>
 
-<a class="float-wa" href="https://wa.me/919372795285?text=Hello%20Infinity%20Furniture%20Gallery%2C%20I%20would%20like%20to%20enquire%20about%20your%20furniture." target="_blank" rel="noopener" aria-label="Contact via WhatsApp">WhatsApp ↗</a>
+<a class="wa" href="https://wa.me/919920393317?text=Hi%20Oakora%20Living%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture.">WhatsApp ↗</a>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('enquiry').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const interest = document.getElementById('interest').value;
+  const details = document.getElementById('details').value.trim();
+  const message = `Hi Oakora Living, my name is ${name}. I'm interested in ${interest}.${details ? ' Requirements: ' + details : ''}`;
+  window.open('https://wa.me/919920393317?text=' + encodeURIComponent(message), '_blank');
+});
 </script>
 </body>
 </html>
