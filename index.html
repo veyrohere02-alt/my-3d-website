@@ -4,467 +4,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101923">
-<title>Silveraaj | Luxury Gifting</title>
-<meta name="description" content="Explore premium silver-electroplated gifts for weddings, home decor, corporate gifting and special occasions.">
+<title>Tag Nails | Koparkhairane</title>
 <style>
-:root{
-  --navy:#101923;
-  --navy2:#192735;
-  --silver:#e9e8e4;
-  --gold:#d8bd85;
-  --white:#fffdf8;
-  --muted:#aeb7bf;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--white);
-  color:var(--navy);
-  line-height:1.6;
-}
-a{text-decoration:none;color:inherit}
-button,input,textarea,select{font:inherit}
-img{display:block;width:100%;object-fit:cover}
-.container{width:min(1160px,90%);margin:auto}
-.topbar{
-  background:var(--gold);color:#1a2026;text-align:center;
-  padding:8px 12px;font-size:11px;letter-spacing:2px;
-}
-header{
-  background:var(--navy);color:white;position:sticky;top:0;
-  z-index:10;border-bottom:1px solid #ffffff18;
-}
-.nav{
-  min-height:76px;display:flex;align-items:center;
-  justify-content:space-between;gap:20px;
-}
-.logo{font-family:Georgia,serif;font-size:26px;letter-spacing:3px}
-.logo small{display:block;font:9px Arial;letter-spacing:4px;color:var(--gold)}
-.navlinks{display:flex;gap:25px;align-items:center;font-size:13px}
-.navlinks a:hover{color:var(--gold)}
-.menu{display:none;background:none;border:0;color:white;font-size:26px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  gap:8px;padding:13px 22px;border:1px solid var(--gold);
-  background:var(--gold);color:#17202a;font-size:12px;
-  font-weight:bold;letter-spacing:1px;cursor:pointer;transition:.2s;
-}
-.btn:hover{background:var(--white);border-color:var(--white)}
-.btn-outline{background:transparent;color:white}
-.hero{
-  background:var(--navy);color:white;overflow:hidden;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;
-  gap:45px;padding:65px 0 75px;
-}
-.eyebrow{color:var(--gold);font-size:10px;letter-spacing:4px;font-weight:bold}
-h1{
-  font-family:Georgia,serif;font-size:clamp(42px,5.5vw,72px);
-  font-weight:400;line-height:1.08;margin:22px 0;
-}
-h1 em{color:var(--gold);font-weight:400}
-.hero p{max-width:450px;color:#c5cbd0;font-size:14px;margin-bottom:28px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-photo{position:relative}
-.hero-photo img{height:490px;object-fit:cover}
-.photo-caption{
-  position:absolute;bottom:18px;left:18px;right:18px;
-  background:#101923d9;color:white;padding:17px;
-  border-left:2px solid var(--gold);font-family:Georgia,serif;
-  font-size:19px;
-}
-.stats{
-  background:#eae7e0;padding:25px 0;
-}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
-.stat{padding:4px 15px;border-right:1px solid #c8c4bb}
-.stat:last-child{border:0}
-.stat strong{display:block;font-family:Georgia,serif;font-size:19px;font-weight:400}
-.stat span{font-size:10px;letter-spacing:1.5px;color:#60666c}
-section{padding:78px 0}
-.section-head{text-align:center;margin-bottom:38px}
-.section-head .eyebrow{color:#9c7a42}
-h2{font:400 clamp(30px,4vw,44px) Georgia,serif;margin:10px 0}
-.section-head p{font-size:13px;color:#70777c;max-width:520px;margin:0 auto}
-.products{background:#f8f6f0}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.product-card{background:white;border:1px solid #e9e4da;overflow:hidden}
-.product-card img{height:260px;transition:transform .4s}
-.product-card:hover img{transform:scale(1.04)}
-.product-image{overflow:hidden;position:relative}
-.tag{
-  position:absolute;top:13px;left:13px;background:var(--gold);
-  padding:5px 9px;font-size:9px;letter-spacing:1px;font-weight:bold;
-}
-.product-info{padding:20px}
-.product-info h3{font:22px Georgia,serif;margin-bottom:5px}
-.product-info p{font-size:12px;color:#72787c;margin-bottom:15px}
-.text-link{font-size:11px;font-weight:bold;letter-spacing:1px;border-bottom:1px solid var(--gold);padding-bottom:5px}
-.categories{background:var(--navy);color:white}
-.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.category{position:relative;min-height:280px;overflow:hidden;background:#26313a}
-.category img{height:280px;position:absolute;inset:0;transition:.4s}
-.category:hover img{transform:scale(1.07)}
-.category:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#071019e8)}
-.category-text{position:absolute;z-index:1;bottom:20px;left:18px;right:10px}
-.category-text h3{font:22px Georgia,serif}
-.category-text span{color:var(--gold);font-size:10px;letter-spacing:1px}
-.bulk{background:#eae7e0}
-.bulk-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.bulk-photo img{height:440px}
-.bulk-copy p{color:#626a70;font-size:14px;margin:15px 0}
-.checks{list-style:none;margin:22px 0}
-.checks li{padding:8px 0;border-bottom:1px solid #d4d0c7;font-size:13px}
-.checks li:before{content:"✦";color:#9c7a42;margin-right:10px}
-.enquiry{background:var(--navy);color:white}
-.enquiry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}
-.enquiry-copy p{color:#c1c8ce;font-size:13px;margin:15px 0}
-.contact-details{margin-top:28px;color:var(--gold);font-size:13px}
-form{display:grid;gap:13px}
-form input,form select,form textarea{
-  width:100%;padding:14px;background:#1a2733;
-  border:1px solid #394550;color:white;outline:none;border-radius:0;
-}
-form input:focus,form select:focus,form textarea:focus{border-color:var(--gold)}
-form select option{background:var(--navy)}
-form textarea{min-height:100px;resize:vertical}
-form .btn{width:100%}
-footer{background:#09111a;color:#b9c0c6;padding:35px 0}
-.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer .logo{color:white}
-footer p{font-size:11px}
-.whatsapp{
-  position:fixed;right:18px;bottom:18px;z-index:20;
-  background:#168a54;color:white;border-radius:30px;
-  padding:13px 18px;font-size:12px;font-weight:bold;
-  box-shadow:0 5px 22px #0003;
-}
-.note{font-size:10px;color:#b6bdc4;margin-top:20px}
-@media(max-width:760px){
-  .nav{min-height:68px}
-  .menu{display:block}
-  .navlinks{
-    display:none;position:absolute;top:68px;left:0;right:0;
-    background:var(--navy);padding:22px 5%;flex-direction:column;
-    align-items:stretch;gap:18px;border-top:1px solid #ffffff18;
-  }
-  .navlinks.open{display:flex}
-  .navlinks .btn{text-align:center}
-  .hero-grid,.bulk-grid,.enquiry-grid{grid-template-columns:1fr;gap:30px}
-  .hero-grid{padding:45px 0}
-  .hero-photo img{height:350px}
-  section{padding:55px 0}
-  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .product-card img{height:190px}
-  .product-info{padding:13px}
-  .product-info h3{font-size:18px}
-  .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .category,.category img{min-height:230px;height:230px}
-  .bulk-photo img{height:300px}
-  .stats-grid{grid-template-columns:1fr;gap:14px}
-  .stat{border-right:0;border-bottom:1px solid #c8c4bb;padding-bottom:13px}
-  .stat:last-child{border:0;padding-bottom:0}
-  .whatsapp{right:12px;bottom:12px}
-}
-@media(max-width:380px){
-  .product-grid{grid-template-columns:1fr}
-  .product-card img{height:250px}
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fff9f8;color:#442934}
+header{padding:20px;text-align:center;background:#f5dfe6}
+.logo{font-family:Georgia,serif;font-size:34px;color:#a84d70}
+header p{letter-spacing:3px;font-size:11px}
+nav{padding:15px;text-align:center;background:#fff;position:sticky;top:0}
+nav a{margin:0 10px;text-decoration:none;color:#633449;font-size:13px}
+.hero{padding:65px 20px;text-align:center;background:linear-gradient(#f9e8ed,#fff9f8)}
+.hero h1{font:normal 46px Georgia;margin:15px 0}
+.hero p{line-height:1.8;color:#765d66}
+.btn{display:inline-block;background:#ad5475;color:white;padding:14px 22px;border-radius:30px;text-decoration:none;margin-top:15px}
+section{padding:45px 20px;text-align:center}
+h2{font:normal 34px Georgia}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
+.card{background:white;border:1px solid #f0dce3;border-radius:14px;padding:25px;width:260px}
+.card h3{font:normal 24px Georgia}
+.card p{color:#806975;line-height:1.6;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:700px;margin:auto}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:12px}
+#gallery{background:#f9eaf0}
+#contact{background:#f5dfe6}
+footer{text-align:center;padding:25px;font-size:12px;color:#806975}
+@media(min-width:650px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
 <body>
-
-<div class="topbar">THOUGHTFUL GIFTS. TIMELESS ELEGANCE.</div>
-
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">SILVERAAJ<small>SILVER ELECTROPLATED</small></a>
-    <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
-    <nav class="navlinks" id="navlinks">
-      <a href="#home">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#occasions">Occasions</a>
-      <a href="#bulk">Bulk Gifting</a>
-      <a class="btn" href="#contact">ENQUIRE NOW</a>
-    </nav>
-  </div>
+<div class="logo">Tag Nails</div>
+<p>NAIL ART • MANI • PEDI</p>
 </header>
-
-<main>
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">THE ART OF GIFTING</div>
-      <h1>Gifts that leave a <em>lasting</em> impression.</h1>
-      <p>
-        Discover elegant silver-electroplated gifts designed to make
-        celebrations, weddings and meaningful moments unforgettable.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="#collections">EXPLORE COLLECTIONS ↗</a>
-        <a class="btn btn-outline" href="#bulk">BULK ENQUIRIES</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85"
-           alt="Elegant jewellery and gift inspiration">
-      <div class="photo-caption">A little luxury. A lasting memory.</div>
-    </div>
-  </div>
-</section>
-
-<div class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong>Wedding Gifting</strong><span>FOR YOUR SPECIAL DAY</span></div>
-    <div class="stat"><strong>Corporate Gifts</strong><span>MAKE EVERY GESTURE COUNT</span></div>
-    <div class="stat"><strong>Bulk Orders</strong><span>GIFTS FOR EVERY GUEST</span></div>
-  </div>
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="hero">
+<p>YOUR BEAUTY, YOUR STYLE</p>
+<h1>Beautiful Nails.<br>Beautiful You.</h1>
+<p>Discover your next favourite nail look at Tag Nails, Koparkhairane.</p>
+<a class="btn" href="https://wa.me/919987353553?text=Hi%20Tag%20Nails%2C%20I%20want%20to%20ask%20about%20an%20appointment">Book on WhatsApp ↗</a>
 </div>
-
-<section class="products" id="collections">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">CURATED WITH CARE</div>
-      <h2>Explore Our Collections</h2>
-      <p>Thoughtful gifting ideas for celebrations big and small.
-      Contact us for product availability and pricing.</p>
-    </div>
-
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">GIFTING</span>
-          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80" alt="Elegant gift inspiration" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Luxury Gift Sets</h3>
-          <p>Elegant gift ideas for people who matter.</p>
-          <a class="text-link" href="#contact" data-product="Luxury Gift Sets">ENQUIRE FOR DETAILS ↗</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">WEDDINGS</span>
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Wedding celebration inspiration" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Wedding Favours</h3>
-          <p>Memorable gifting for your special celebration.</p>
-          <a class="text-link" href="#contact" data-product="Wedding Favours">ENQUIRE FOR DETAILS ↗</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">HOME</span>
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Refined home decor inspiration" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Home Decor</h3>
-          <p>Decorative accents for thoughtfully styled spaces.</p>
-          <a class="text-link" href="#contact" data-product="Home Decor">ENQUIRE FOR DETAILS ↗</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">CORPORATE</span>
-          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80" alt="Premium gift packaging inspiration" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Corporate Gifting</h3>
-          <p>Make business milestones and celebrations special.</p>
-          <a class="text-link" href="#contact" data-product="Corporate Gifting">ENQUIRE FOR DETAILS ↗</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">CELEBRATIONS</span>
-          <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=700&q=80" alt="Special occasion gift inspiration" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Festive Gifts</h3>
-          <p>Bring a touch of elegance to every occasion.</p>
-          <a class="text-link" href="#contact" data-product="Festive Gifts">ENQUIRE FOR DETAILS ↗</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-image">
-          <span class="tag">BULK ORDERS</span>
-          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80" alt="Gift boxes arranged for an event" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>Bulk Gift Orders</h3>
-          <p>Gifting solutions for weddings, events and businesses.</p>
-          <a class="text-link" href="#bulk">DISCUSS YOUR REQUIREMENTS ↗</a>
-        </div>
-      </article>
-    </div>
-  </div>
+<section id="services">
+<h2>Our Services</h2>
+<p>Little details make a beautiful difference.</p>
+<div class="cards">
+<div class="card"><h3>Nail Art</h3><p>Creative designs, elegant finishes and beautiful nail looks.</p></div>
+<div class="card"><h3>Manicure</h3><p>Give your hands a neat, polished and beautiful look.</p></div>
+<div class="card"><h3>Pedicure</h3><p>Enjoy a refreshing self-care and foot-care session.</p></div>
+</div>
 </section>
-
-<section class="categories" id="occasions">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">EVERY MOMENT DESERVES SOMETHING SPECIAL</div>
-      <h2>Made for Meaningful Moments</h2>
-      <p style="color:#c1c8ce">Find inspiration for the celebrations you will always remember.</p>
-    </div>
-    <div class="category-grid">
-      <a class="category" href="#contact" data-product="Wedding Gifts">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding occasion" loading="lazy">
-        <div class="category-text"><span>01 / CELEBRATE</span><h3>Weddings</h3></div>
-      </a>
-      <a class="category" href="#contact" data-product="Corporate Gifts">
-        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Corporate gifting" loading="lazy">
-        <div class="category-text"><span>02 / APPRECIATE</span><h3>Corporate</h3></div>
-      </a>
-      <a class="category" href="#contact" data-product="Festive Gifts">
-        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=600&q=80" alt="Celebration gifts" loading="lazy">
-        <div class="category-text"><span>03 / SHARE JOY</span><h3>Festivals</h3></div>
-      </a>
-      <a class="category" href="#contact" data-product="Return Favours">
-        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=600&q=80" alt="Thoughtful gift ideas" loading="lazy">
-        <div class="category-text"><span>04 / SAY THANK YOU</span><h3>Return Favours</h3></div>
-      </a>
-    </div>
-  </div>
+<section id="gallery">
+<h2>Nail Art Gallery</h2>
+<p>Find inspiration for your next nail look.</p>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Nail art">
+<img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=600&q=80" alt="Nail polish">
+<img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=600&q=80" alt="Manicure">
+</div>
 </section>
-
-<section class="bulk" id="bulk">
-  <div class="container bulk-grid">
-    <div class="bulk-photo">
-      <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=85" alt="Gift boxes prepared for a special occasion" loading="lazy">
-    </div>
-    <div class="bulk-copy">
-      <div class="eyebrow">FOR WEDDINGS & BUSINESSES</div>
-      <h2>Beautiful Gifting. Bigger Celebrations.</h2>
-      <p>
-        Planning a wedding, corporate event or a special celebration?
-        Tell us what you have in mind and enquire about gifting options
-        for your guest list or team.
-      </p>
-      <ul class="checks">
-        <li>Wedding and return-favour enquiries</li>
-        <li>Corporate and event gifting</li>
-        <li>Bulk quantity and product enquiries</li>
-        <li>Personal assistance through WhatsApp</li>
-      </ul>
-      <a class="btn" href="#contact">PLAN YOUR BULK ORDER ↗</a>
-    </div>
-  </div>
+<section>
+<h2>Visit Tag Nails</h2>
+<p>Koparkhairane, Navi Mumbai</p>
+<p>Shop No. 1, Pritchhaya CHS, Plot No. 89,<br>Sector 3, Koparkhairane, Navi Mumbai 400709</p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Tag+Nails+Koparkhairane" target="_blank">Find Us on Maps ↗</a>
 </section>
-
-<section class="enquiry" id="contact">
-  <div class="container enquiry-grid">
-    <div class="enquiry-copy">
-      <div class="eyebrow">LET'S MAKE IT SPECIAL</div>
-      <h2>Find the Perfect Gift.</h2>
-      <p>
-        Have a product in mind or need gifts for a special occasion?
-        Send an enquiry and continue the conversation on WhatsApp.
-      </p>
-      <div class="contact-details">
-        <p>WHATSAPP ENQUIRIES</p>
-        <p style="color:white;font-size:18px">+91 99202 22166</p>
-        <p style="color:#c1c8ce">Product prices and availability to be confirmed directly.</p>
-      </div>
-    </div>
-
-    <form id="enquiryForm">
-      <input id="name" type="text" placeholder="Your name" required>
-      <input id="phone" type="tel" placeholder="Your contact number (optional)">
-      <select id="interest" required>
-        <option value="">What are you looking for?</option>
-        <option>Wedding Gifts</option>
-        <option>Return Favours</option>
-        <option>Home Decor</option>
-        <option>Corporate Gifting</option>
-        <option>Bulk Orders</option>
-        <option>Other Products</option>
-      </select>
-      <input id="quantity" type="text" placeholder="Approx. quantity (optional)">
-      <textarea id="message" placeholder="Tell us about your requirements (optional)"></textarea>
-      <button class="btn" type="submit">SEND ENQUIRY ON WHATSAPP ↗</button>
-      <p class="note">Your enquiry will open in WhatsApp for you to review and send.</p>
-    </form>
-  </div>
+<section id="contact">
+<h2>Ready for Your Next Look?</h2>
+<p>Contact us to enquire about services and appointments.</p>
+<p><b>+91 99873 53553</b></p>
+<a class="btn" href="https://wa.me/919987353553?text=Hi%20Tag%20Nails%2C%20please%20share%20your%20services%20and%20appointment%20availability." target="_blank">WhatsApp Us ↗</a>
 </section>
-</main>
-
 <footer>
-  <div class="container footer-row">
-    <a class="logo" href="#home">SILVERAAJ<small>SILVER ELECTROPLATED</small></a>
-    <p>Thoughtful gifts for life's special moments.</p>
-    <p>© <span id="year"></span> Silveraaj · Website concept demo</p>
-  </div>
+Tag Nails · Koparkhairane, Navi Mumbai<br><br>
+Website concept demo — details, photos and services to be confirmed by the salon.
 </footer>
-
-<a class="whatsapp" href="https://wa.me/919920222166?text=Hi%20Silveraaj%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
-   target="_blank" rel="noopener">☏ WhatsApp Enquiry</a>
-
-<script>
-const menuBtn = document.getElementById('menuBtn');
-const navlinks = document.getElementById('navlinks');
-
-menuBtn.addEventListener('click', () => {
-  navlinks.classList.toggle('open');
-  menuBtn.setAttribute(
-    'aria-expanded',
-    navlinks.classList.contains('open') ? 'true' : 'false'
-  );
-});
-
-document.querySelectorAll('#navlinks a').forEach(link => {
-  link.addEventListener('click', () => navlinks.classList.remove('open'));
-});
-
-document.querySelectorAll('[data-product]').forEach(link => {
-  link.addEventListener('click', () => {
-    const interest = document.getElementById('interest');
-    const product = link.dataset.product;
-    const options = Array.from(interest.options);
-    const matching = options.find(option => option.text === product);
-    if (matching) interest.value = matching.value;
-    else if (/wedding/i.test(product)) interest.value = 'Wedding Gifts';
-    else if (/corporate/i.test(product)) interest.value = 'Corporate Gifting';
-    else if (/return/i.test(product)) interest.value = 'Return Favours';
-    else if (/bulk/i.test(product)) interest.value = 'Bulk Orders';
-    else if (/festive/i.test(product)) interest.value = 'Other Products';
-  });
-});
-
-document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const interest = document.getElementById('interest').value;
-  const quantity = document.getElementById('quantity').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  const text =
-    'Hi Silveraaj! I would like to enquire about your products.%0A'.replace('%0A','\n') +
-    '\nName: ' + name +
-    (phone ? '\nContact: ' + phone : '') +
-    '\nInterested in: ' + interest +
-    (quantity ? '\nApprox. quantity: ' + quantity : '') +
-    (message ? '\nRequirements: ' + message : '');
-
-  window.open(
-    'https://wa.me/919920222166?text=' + encodeURIComponent(text),
-    '_blank',
-    'noopener'
-  );
-});
-
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
